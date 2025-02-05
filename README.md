@@ -2,7 +2,7 @@
 
 ## Description
 
-**My Library** is a project created for *The Odin Project* course. It’s a simple yet powerful library system that allows users to manage their personal book collection. With this library, you can add, edit, delete, and view books, all through an easy-to-use interface.
+**Your Library** is a project created for *The Odin Project* course. It’s a simple yet powerful library system that allows users to manage their personal book collection. With this library, you can add, edit, delete, and view books, all through an easy-to-use interface.
 
 The initial library comes with a few **default books** to get you started. These books can be deleted, edited, or used as a base to add new books.
 
