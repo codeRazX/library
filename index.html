@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="/js/index.js"></script>
+</head>
+<body>
+    
+
+    <div id="overlay" class="overlay"></div>
+
+    <div id="modal__add" class="modal__add">
+        <h2 id="header__modal" class="modal__head">Add a book to your library</h2>
+
+        <form autocomplete="off" id="form-create" class="form__modal">
+
+            <div class="modal__block">
+                <label class="modal__label" for="title">Title<span>*</span></label>
+                <input class="modal__input" type="text" name="title" id="title" placeholder="Enter title">              
+            </div>
+ 
+            <div class="modal__block">
+                <label class="modal__label" for="author">Author<span>*</span></label>
+                <input class="modal__input" type="text" name="author" id="author" placeholder="Enter author">
+            </div>
+
+            <div class="modal__block">
+                <label class="modal__label" for="year">Year</label>
+                <input class="modal__input" type="text" name="year" id="year" placeholder="Insert the year">
+            </div>
+
+            <div class="modal__block">
+                <label class="modal__label" for="pages">Pages</label>
+                <input class="modal__input" type="text" name="pages" id="pages" placeholder="Number of pages">
+            </div>
+
+            <div class="modal__block">
+                <p class="modal__label" for="read__modal">Read<span>*</span></p>
+               
+                <div class="modal__block-read">
+                    <div class="modal__block__read">
+                    <label class="modal__label" for="read__modal_yes">Yes</label>
+                    <input type="radio" value="Yes" name="read__modal" id="read__modal_yes">
+                    </div>
+
+                    <div class="modal__block__read">
+                    <label class="modal__label" for="read__modal_no">No</label>
+                    <input type="radio" value="No" name="read__modal" id="read__modal_no">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal__block">
+                <label class="modal__label" for="genre">Genre<span>*</span></label>
+                <select class="modal__input modal__input-select" name="genre" id="genre">
+                    <option disabled selected value="">--Select--</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                    <option value="science-fiction">Science Fiction</option>
+                </select>
+            </div>
+
+            <div class="modal__block">
+                <label class="modal__label" for="summary">Summary</label>
+                <textarea name="summary" id="summary" class="modal__input modal__input-summary" placeholder="Write a summary here"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn__modal">Create Book</button>
+        </form>
+       
+        <span data-action="close" class="close__modal">X</span>
+    </div>
+
+
+    <header class="header container">
+        <h1 class="header__header">Your <span>Library</span></h1>
+
+        <div><button data-action="openModalAdd" class="btn">Add Book</button></div>
+    </header>
+
+    <section class="explore">
+        <h2 class="explore__heading">Explore Your Library</h2>
+
+        <div class="explore__grid container">
+
+            <div class="explore__info">
+                <p class="explore__description">Explore your own personalized library. Start with a selection of books, but you decide what to add and how to organize it. Filter, sort, and customize your reading space. Click to get started!</p>
+                <a href="#main"><button class="btn">Go Library</button></a>
+            </div>
+
+            <div class="explore__img">
+                <img src="public/book_exploring.png" alt="Image Explore Library" loading="lazy"width="500px" height="500px">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="add">
+        <h2 class="add__heading">Add a New Book</h2>
+
+        <div class="add__grid container">
+
+            <div class="add__img">
+                <img src="public/library.jpg" alt="Image Explore Library" loading="lazy"width="500px" height="500px">
+            </div>
+
+            <div class="add__btn">
+                <h3>Add a new book to your personal library. You can include details such as the title, author, genre, and more</h3>
+                <button data-action="openModalAdd" class="btn">Add Book</button>
+            </div>
+            
+        </div>
+    </section>
+
+    <main id="main" class="main">
+        <h2 class="main__heading">Your Library</h2>
+
+        <form autocomplete="off" id="form-filter" class="form container">
+
+            <div class="form__block">
+                <label class="form__label" for="title-modal">Title</label>
+                <input class="form__input" type="text" name="title-modal" id="title-modal" placeholder="Filter by title">
+            </div>
+
+            <div class="form__block">
+                <label class="form__label" for="author-modal">Author:</label>
+                <input class="form__input" type="text" name="author-modal" id="author-modal" placeholder="Filter by author's name">
+            </div>
+
+            <div class="form__block">
+                <label class="form__label" for="year-modal">Year</label>
+                <select class="form__input" name="year-modal" id="year-modal">
+                    <option disabled selected value="">--Select--</option>
+                    <option value="1900">-1900</option>
+                    <option value="1900-1950">1900-1950</option>
+                    <option value="1950-2000">1950-2000</option>
+                    <option value="2001-2010">2001-2010</option>
+                    <option value="2011-2020">2011-2020</option>
+                    <option value="2021-2025">2021-2025</option>
+                </select>
+            </div>
+
+            <div class="form__block">
+                <label class="form__label" for="checkbox">Read</label>
+                <input class="form__checked" name="read" type="checkbox" id="checkbox">
+            </div>
+
+            <div class="form__block">
+                <label class="form__label" for="pages-modal">Pages</label>
+                
+                <select class="form__input" name="pages-modal" id="pages-modal">
+                    <option disabled selected value="">--Select--</option>
+                    <option value="1-150">1-150</option>
+                    <option value="151-300">151-300</option>
+                    <option value="300">300+</option>
+                   
+                </select>
+            </div>     
+
+            <div class="form__block">
+                <label class="form__label" for="genre__modal">Genre</label>
+                <select class="form__input" name="genre__modal" id="genre__modal">
+                    <option disabled selected value="">--Select--</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                    <option value="science-fiction">Science Fiction</option>
+                </select>
+            </div>
+        </form> 
+
+        <nav id="nav-library" class="group__btn container">
+                <button data-action="reset" class="btn__modify btn__modify__reset">Reset Filters</button>
+                <button data-action="filter-library" class="btn__modify btn__modify__filter">Filter</button>
+                <button data-action="openModalAdd" class="btn__modify btn__modify__add">Add Book</button>
+                <button data-action="sort-library" class="btn__modify btn__modify__sort">Sort</button>
+                <button data-action="clear-library" class="btn__modify btn__modify__clear">Clear Library</button>
+        </nav>
+
+        <h3 class="library__default active">No results found, start adding books to your collection</h3>
+
+        <div id="library" class="main__library  container">
+
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Your library, <span>v1.0.0</span></p>
+    </footer>
+</body>
+</html>
