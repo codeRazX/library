@@ -233,11 +233,11 @@ const logicEdit = ()=>{
     const inputs = [...formCreate.querySelectorAll("input"),formCreate.querySelector("select"),formCreate.querySelector("textarea")];
 
     const bookSelected = myLibrary[currentIndex(myLibrary)];
-    
     inputs.forEach(input => {
         const fieldId = input.id;
         
         if (bookSelected[fieldId] !== "" || bookSelected[fieldId] !== undefined) {
+            
             if (fieldId === "genre") {
                 input.value = bookSelected[fieldId];
             } 
@@ -319,5 +319,7 @@ const createDefaultsBooks = () => {
         }, index * 10);
         
     })
+
+    
 };
 const ui = new UI();
